@@ -1,14 +1,15 @@
 {
-  "name": "first-run",
-  "version": "1.2.0",
+  "name": "@zmarouf/first-run",
+  "version": "2.0.0",
   "description": "Check if it's the first time the process is run",
   "license": "MIT",
-  "repository": "sindresorhus/first-run",
+  "repository": "zmarouf/first-run",
   "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
+    "name": "Zeid Marouf",
+    "email": "zeidmarouf@gmail.com",
     "url": "sindresorhus.com"
   },
+  "private": true,
   "engines": {
     "node": ">=0.10.0"
   },
@@ -28,8 +29,7 @@
     "start"
   ],
   "dependencies": {
-    "configstore": "^2.0.0",
-    "read-pkg-up": "^1.0.1"
+    "configstore": "^2.0.0"
   },
   "devDependencies": {
     "xo": "*"

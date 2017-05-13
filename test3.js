@@ -1,8 +1,11 @@
+/* eslint unicorn/no-process-exit: "off" */
+
 'use strict';
-var Configstore = require('configstore');
-var firstRun = require('./');
-(new Configstore('first-run_first-run')).clear();
-var shouldBeTrue = firstRun();
-firstRun.clear();
-var shouldBeTrueAgain = firstRun();
+const Configstore = require('configstore');
+const firstRun = require('./');
+
+(new Configstore('@zmarouf/first-run')).clear();
+const shouldBeTrue = firstRun('@zmarouf/first-run');
+firstRun.clear('@zmarouf/first-run');
+const shouldBeTrueAgain = firstRun('@zmarouf/first-run');
 process.exit(shouldBeTrue && shouldBeTrueAgain ? 0 : 1);

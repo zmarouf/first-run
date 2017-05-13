@@ -1,3 +1,6 @@
+/* eslint unicorn/no-process-exit: "off" */
+
 'use strict';
-var firstRun = require('./');
-process.exit(firstRun() ? 1 : 0);
+const firstRun = require('./');
+
+process.exit(firstRun('@zmarouf/first-run') ? 1 : 0);

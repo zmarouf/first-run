@@ -1,5 +1,8 @@
+/* eslint unicorn/no-process-exit: "off" */
+
 'use strict';
-var Configstore = require('configstore');
-var firstRun = require('./');
-(new Configstore('first-run_first-run')).clear();
-process.exit(firstRun() ? 0 : 1);
+const Configstore = require('configstore');
+const firstRun = require('./');
+
+(new Configstore('@zmarouf/first-run')).clear();
+process.exit(firstRun('@zmarouf/first-run') ? 0 : 1);

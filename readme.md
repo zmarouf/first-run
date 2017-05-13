@@ -1,14 +1,15 @@
-# first-run [![Build Status](https://travis-ci.org/sindresorhus/first-run.svg?branch=master)](https://travis-ci.org/sindresorhus/first-run)
+# @zmarouf/first-run
 
 > Check if it's the first time the process is run
 
 Can be used to greet the user the first time they use your CLI app, show usage tip, initialize something, etc.
 
+Forked from [first-run](https://github.com/sindresorhus/first-run)
 
 ## Install
 
 ```
-$ npm install --save first-run
+$ npm install --save zmarouf/first-run
 ```
 
 
@@ -16,9 +17,9 @@ $ npm install --save first-run
 
 ```js
 // x.js
-var firstRun = require('first-run');
+var firstRun = require('@zmarouf/first-run');
 
-console.log(firstRun());
+console.log(firstRun('name'));
 ```
 
 ```
@@ -31,20 +32,20 @@ false
 
 ## API
 
-### firstRun([options])
+### firstRun(name, [options])
 
-#### options.name
+#### options.globalConfigPath
 
-Type: `string`  
-Default: `name` field in your package.json
+Type: `boolean`  
+Default: `false`
 
-The name used to identify it.
+Save to $CONFIG/name/config.json instead of $CONFIG/configstore/name/config.json
 
-### firstRun.clear()
+### firstRun.clear(name)
 
 Clear the state.
 
 
 ## License
-
+MIT © Zeid Marouf forked from [first-run](https://github.com/sindresorhus/first-run)
 MIT © [Sindre Sorhus](http://sindresorhus.com)
